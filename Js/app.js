@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || []
     const URL = 'https://dummyjson.com/products/category/sports-accessories?limit=20'
+
+    let contador = document.getElementById('contadoCarrito')
+    contador.textContent = carrito.length
+    
     fetch(URL)
         .then(res => res.json())
         .then(data => {
@@ -24,6 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         agregarcarrito()
 
                     })
+                    const agregarcarrito = ()=>{
+                        carrito.push(item)
+                        localStorage.setItem('carrito', JSON.stringify(carrito))
+                        contador.textContent = carrito.length
+                    }
+
+                    let contador = document.getElementById('contadoCarrito')
+                    contador.textContent = carrito.length
 
                     article.appendChild(titulo)
                     article.appendChild(img)

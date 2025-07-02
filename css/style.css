@@ -22,6 +22,41 @@ body {
     width: 350px;
     height: auto;
 }
+
+
+/*lista carrito*/
+
+#main-content-carrito h1{
+    text-align: center;
+    margin-left: 50px;
+}
+
+
+#productos-none{
+    text-align: center;
+     margin-left: 50px;
+}
+.lista-carrito ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+.lista-carrito ul li img{
+ width: 60px;
+
+}
+
+.total{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 50px;
+}
 /*nav*/
 
 .nav-content ul{
@@ -68,6 +103,17 @@ button {
 
 }
 
+.lista-carrito button{
+    background-color: rgb(212, 3, 3);
+}
+
+.btn-fin{
+background-color: green;
+}
+
+.btn-vaciar{
+background-color: rgb(212, 3, 3);
+}
 /*img*/
 .article-content img {
     width: 350px;
@@ -96,4 +142,6 @@ button:hover {
 /*footer*/
 footer{
     text-align: center;
+    margin-top: 100px;
+    margin-left: 50px;
 }
